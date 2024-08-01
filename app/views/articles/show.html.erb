@@ -8,3 +8,13 @@
 <%= button_to "Destroy", article_path(@article), data: {turbo_confirm: "Are you sure?"}, method: :delete, style: "margin-top: 10px;" %> 
 
 <%= button_to "Homepage", root_path, method: :get, style: "margin-top: 10px;" %>
+
+<hr>
+
+<h2>Comments!!</h2>
+<%= render @article.comments %>
+
+<hr>
+
+<h2>Add a comment:</h2>
+<%= render 'comments/form' %>
